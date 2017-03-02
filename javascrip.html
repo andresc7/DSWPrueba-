@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Operaciones matematicas  </title>
+<style>
+body{
+background-color:#E0F8EC;
+
+}
+</style>
+</head>
+<script>
+//mi primera suma 
+
+ function verificar(){
+ var control;
+ var suma;
+ //busca un elemento en el body que tenga id con el valor ingresado 
+ control= document.getElementById('valor_ingresado');
+ 
+ var resultado =control.value;
+ var suma1;
+ var num1=0;
+ var num2=1;
+suma1=total();
+ if (resultado==suma1){
+ var texto=document.getElementById('mensaje');
+ texto.innerText="Bienvenido";
+  window.alert(" Bienvenido ");
+  }
+  else{
+ var texto=document.getElementById('mensaje');
+ window.alert(" No puedes pasar");
+ texto.innerText="No  puedes pasar";
+ 
+ 
+ }
+ //para numero=parceFloat(cadena);
+ }
+ //numeros aleatorios y conversion a enteros eliminando numeros despues del punto
+function suma(){
+var numeros;
+var num1;
+var num2;
+var suma;
+numeros= document.getElementById('Numeros_aleatorios');
+var numero1;
+numero1=parseFloat((Math.random())*100);
+num1=parseInt(numero1);
+var numero2;
+numero2=parseFloat((Math.random())*100);
+num2=parseInt(numero2);
+numeros.innerText=num1 + '+' + num2 + '=';
+suma=num1+num2;
+return suma
+ }
+ 
+ // restar numeros 
+function resta(){
+var numeros;
+var num1;
+var num2;
+var resta;
+numeros= document.getElementById('Numeros_aleatorios');
+var numero1;
+numero1=parseFloat((Math.random())*100);
+num1=parseInt(numero1);
+var numero2;
+numero2=parseFloat((Math.random())*100);
+num2=parseInt(numero2);
+numeros.innerText=num1 + '-' + num2 + '=';
+resta=num1-num2;
+return resta
+ }
+//multiplicar numeros 
+function multiplicacion(){
+var numeros;
+var num1;
+var num2;
+var mult;
+numeros= document.getElementById('Numeros_aleatorios');
+var numero1;
+numero1=parseFloat((Math.random())*100);
+num1=parseInt(numero1);
+var numero2;
+numero2=parseFloat((Math.random())*100);
+num2=parseInt(numero2);
+numeros.innerText=num1 + '*' + num2 + '=';
+mult=num1*num2;
+return mult
+}
+ 
+//dividir numeros  
+function division(){
+var numeros;
+var num1;
+var num2;
+var div;
+numeros= document.getElementById('Numeros_aleatorios');
+var numero1;
+numero1=parseFloat((Math.random())*100);
+num1=parseInt(numero1);
+var numero2;
+numero2=parseFloat((Math.random())*100);
+num2=parseInt(numero2);
+numeros.innerText=num1 + '/' + num2 + '=';
+div=num1/num2;
+return div
+}
+ 
+ //operaciones 
+ 
+ function operaciones4(){
+ suma();
+ resta();
+ multiplicacion();
+
+ }
+ 
+ function arreglooperaciones(){
+ var arreglo=["+","-","*", "/"];
+ for (x=0;x<arreglo.length;x++){
+ document.write (arreglo[x] + " ");
+ }
+ }
+ function total(){
+ var suma2;
+ suma2=aleatorios();
+ return suma2;
+ 
+ }
+ 
+</script>
+<body onload= "suma();resta();multiplicacion()" >
+<h1> Por favor confirma tu edad</h1>
+<p> Para continuar, por favor resuelve la siguiente operacion y escribe el resultado:</p>
+<span id="Numeros_aleatorios">  </span> 
+<input id ="valor_ingresado" type="text"/>
+<button onclick="verificar()" > Verificar</button>
+<h2 id="mensaje"></h2>
+
+</body>
+</html>
